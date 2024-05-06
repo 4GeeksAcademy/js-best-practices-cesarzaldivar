@@ -1,45 +1,45 @@
-let inventory = [
+let inventoryFruit = [
   {
     name: "apples",
-    id: 1,
+    idProduct: 1,
     quantity: 20,
-    price: 0.85,
+    pricePerUnit: 0.85,
   },
   {
     name: "bananas",
+    idProduc: 2,
     quantity: 10,
-    id: 2,
-    price: 1.25,
+    pricePerUnit: 1.25,
   },
   {
     name: "cherries",
+    idProduc: 3,
     quantity: 5,
-    price: 2.5,
-    id: 3,
+    pricePerUnit: 2.5,
   },
   {
     name: "dates",
+    idProduc: 4,
     quantity: 2,
-    price: 3.0,
-    id: 4,
+    pricePerUnit: 3.0,
   },
   {
     name: "elderberries",
+    idProduc: 5,
     quantity: 1,
-    price: 4.0,
-    id: 5,
+    pricePerUnit: 4.0,
   },
   {
     name: "Watermelon",
+    idProduc: 6,
     quantity: 0,
-    price: 5.0,
-    id: 6,
+    pricePerUnit: 5.0,
   },
   {
     name: "grapes",
+    idProduc: 7,
     quantity: 0,
-    price: 6.0,
-    id: 7,
+    pricePerUnit: 6.0,
   },
 ];
 
@@ -87,7 +87,7 @@ function processOrder(order, inventory) {
     for (let j = 0; j < inventory.length; j++) {
       // Find the item in the inventory
       if (inventory[j].id === itemID) {
-        item_price = inventory[j].price;
+        item_price = inventory[j].pricePerUnit;
         itemTax = item_price * 0.1;
         itemShipping = item_price * 0.05;
         itemGrandTotal = item_price + itemTax + itemShipping;
